@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="enigmacode_db" Class="LinqEnigmaContentDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=enigmacode.database.windows.net;Initial Catalog=enigmacode_db;User ID=enigmadmin;Connect Timeout=60" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="enigmacode_dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Submissions" Member="Submissions">
+    <Type Name="Submission">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MessageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Complexity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime2 NOT NULL" CanBeNull="false" />
+      <Column Name="Score" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsSuccess" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SessionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Messages" Member="Messages">
+    <Type Name="Message">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Length" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Grade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Disabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Attempted" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Deciphered" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastAttempt" Type="System.DateTime" DbType="DateTime2" CanBeNull="true" />
+      <Column Name="Complexity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

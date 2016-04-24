@@ -1,0 +1,78 @@
+﻿@model EnigmaContest.Models.DecodeResult
+@using EnigmaContest.Code
+@{
+    ViewBag.Title = "Your results";
+}
+<style>
+    .mxbox {
+        display: block;
+        border: solid 2px black;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .txtwrapper {
+        border: 1px solid #999999;
+        margin: 5px 0;
+        padding: 3px;
+    }
+
+    .panel {
+        box-shadow: none !important;
+    }
+
+    . nested {
+        width: 90%;
+        box-sizing: border-box;
+    }
+</style>
+@Scripts.Render("~/bundles/jquery")
+
+
+<div class="panel">
+    <div style="display: block;" id="rulesformitem" class="formitem">
+        <div>
+            <h2>Hello, agent <b>@ViewBag.User</b></h2>
+        </div>
+
+        @if (Model.IsCorrect)
+        {
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    You have successfully decoded the message! <span class="pull-right"><span class="badge">+@Model.Score</span> = <span class="badge">@Model.TotalScore</span></span>
+                </div>
+                <div class="panel-body">
+                    Thank you for decoding this message to <b>@(Model.Percent)%</b>. Our intelligence department is trying to understand it now.<br />
+                    Go ahead with more decoding! <br />
+                    Remember, agent : the enemy does not relent!
+                </div>
+            </div>
+
+        }
+        else
+        {
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    The message hasn't been cracked <span class="pull-right"><span class="badge" >-1</span> = <span class="badge">@Model.TotalScore</span></span>
+                </div>
+                <div class="panel-body">
+                    We are surry, but the message seems to remain immune to your decoding. <br />
+                    Only <b>@(Model.Percent)%</b> of the message could be attributed to the ciphered content. <br/>
+                    Your score decreased by one to repair the damage of this message. <br />
+                    Try your luck with another message.
+                </div>
+            </div>
+
+        }
+
+    </div>
+    <h5>
+        @Html.ActionLink("Try more messages", "Play", "Game", null, new {@class= "btn btn-primary btn-lg"} )
+    </h5>
+    
+</div>

@@ -1,0 +1,36 @@
+﻿@using EnigmaContest.Models
+@model List<User>
+
+@{
+    ViewBag.Title = "Leaderboard";
+}
+
+
+<div class="panel">
+    <div style="display: block;" id="rulesformitem" class="formitem">
+        <div>
+            <h2>@ViewBag.Title</h2>
+            <div>
+                <table class="table table-bordered table-striped table-hover">
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Attempted</th>
+                        <th>Decoded</th>
+                        <th>Score</th>
+                    </tr>
+                    @foreach(var m in Model)
+                    {
+                    <tr>
+                        <td>@m.Username</td>
+                        <td>@m.Age</td>
+                        <td>@(m.Attempted ?? 0)</td>
+                        <td>@(m.Deciphered ?? 0)</td>
+                        <td>@(m.Score ?? 0)</td>
+                    </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

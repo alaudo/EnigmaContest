@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Enigma Code</h1>
+    <p class="lead">This is a game where you need to decode intercepted messages using your Python skills.</p>
+    <p><a href="http://www.learnpython.org/en/Basic_String_Operations" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Python documentation</h2>
+        <p>
+            If you want to know all about strings and how to manipulate them, refer to the documentation.
+        </p>
+        <p><a class="btn btn-default" href="https://docs.python.org/3.5/library/string.html">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Try hints</h2>
+        <p>First try to approach the text you get with your skills. Only if you can't solve it, look at hints.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Leaderboard</h2>
+        <p>Visit leaderboard to see your scores and how you are standing in respect to the others.</p>
+        <p><a class="btn btn-default" href="@Url.Action("Leaderboard", "Result")">Learn more &raquo;</a></p>
+    </div>
+</div>

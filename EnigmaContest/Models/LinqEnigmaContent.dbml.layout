@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LinqEnigmaContent">
+  <DataContextMoniker Name="/LinqEnigmaContentDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2994b2d5-8e48-4cc6-88b0-3a825ad9064f" absoluteBounds="5.625, 0.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/LinqEnigmaContentDataContext/Submission" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ef2a090-b5a9-41ba-9f01-f6b4aa24ebf1" absoluteBounds="5.64, 1.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f1d3600-36dd-4d66-939c-7ec6067e851a" absoluteBounds="3.375, 0.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LinqEnigmaContentDataContext/Message" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf5e073e-ad74-4ce4-acd1-c15c2241801b" absoluteBounds="3.3899999999999997, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d5e226f-d073-4dd2-b9bd-957190069c13" absoluteBounds="1.125, 0.625, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LinqEnigmaContentDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cad0c9ba-380a-45e1-8910-93ed84ffe30f" absoluteBounds="1.1400000000000001, 1.085, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
